@@ -93,7 +93,7 @@ module CrowdFlower
         download_csv(type, filename)
       else
         puts "CSV written to: #{File.expand_path(filename)}"
-        File.open(filename, "w") {|f| f.puts res.body }
+        File.open(filename, "wb") {|f| f.puts res.body }
       end
     end
     
